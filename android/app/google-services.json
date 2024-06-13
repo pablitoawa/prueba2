@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "628425060073",
+    "firebase_url": "https://catv2-afbce-default-rtdb.firebaseio.com",
+    "project_id": "catv2-afbce",
+    "storage_bucket": "catv2-afbce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628425060073:android:1778b9f2a4d43571240a78",
+        "android_client_info": {
+          "package_name": "com.example.catv2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE6c0aB4lAiZaaRLFJB5i9BmNwcumDK1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:628425060073:android:625f595ea9de0e9d240a78",
+        "android_client_info": {
+          "package_name": "com.example.prueba2"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE6c0aB4lAiZaaRLFJB5i9BmNwcumDK1M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
