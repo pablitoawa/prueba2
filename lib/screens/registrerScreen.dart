@@ -25,6 +25,13 @@ class Register extends StatelessWidget {
 
 Widget cuerpo(context) {
   return Container(
+    decoration: const BoxDecoration(
+      image: DecorationImage(
+        image: NetworkImage(
+            'https://i.pinimg.com/736x/04/42/c6/0442c6034a65913b61c73f715be6c8a1.jpg'),
+        fit: BoxFit.cover,
+      ),
+    ),
     padding: const EdgeInsets.all(20),
     alignment: Alignment.center,
     child: (Column(

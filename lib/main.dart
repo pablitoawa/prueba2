@@ -43,6 +43,13 @@ class _IngresoState extends State<Ingreso> {
 
 Widget cuerpo(context) {
   return Container(
+    decoration: const BoxDecoration(
+      image: DecorationImage(
+        image: NetworkImage(
+            'https://marketplace.canva.com/EAE8EjK0Z2A/1/0/900w/canva-fondo-de-pantalla-gratis-kawaii-aesthetic-rosa-NNQpqeeFOXw.jpg'),
+        fit: BoxFit.cover,
+      ),
+    ),
     padding: const EdgeInsets.all(20),
     alignment: Alignment.center,
     child: (Column(

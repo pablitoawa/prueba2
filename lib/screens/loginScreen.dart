@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:prueba2/screens/conjuntoScreen.dart';
 import 'package:prueba2/screens/cuentaScreen.dart';
 import 'package:prueba2/screens/registrerScreen.dart';
 
@@ -25,10 +26,22 @@ class Login extends StatelessWidget {
 
 Widget cuerpo(context) {
   return Container(
+    decoration: const BoxDecoration(
+      image: DecorationImage(
+        image: NetworkImage(
+            'https://i.pinimg.com/736x/04/42/c6/0442c6034a65913b61c73f715be6c8a1.jpg'),
+        fit: BoxFit.cover,
+      ),
+    ),
     padding: const EdgeInsets.all(20),
     alignment: Alignment.center,
     child: (Column(
-      children: [correo(), contrasena(), botonLogin(context), botonRegistro(context)],
+      children: [
+        correo(),
+        contrasena(),
+        botonLogin(context),
+        botonRegistro(context)
+      ],
     )),
   );
 }
@@ -71,13 +84,23 @@ Future<void> login(BuildContext context) async {
         email: _emailController.text, password: _passwordController.text);
 
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const Cuenta()));
+        context, MaterialPageRoute(builder: (context) => const Conjunto()));
   } on FirebaseAuthException catch (e) {
-    if (e.code == 'user-not-found') {
-      print('No user found for that email.');
-    } else if (e.code == 'wrong-password') {
-      print('Wrong password provided for that user.');
-    }
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Error'),
+          content: Text(e.message ?? 'Ha ocurrido un error'),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () => Navigator.of(context).pop(),
+              child: const Text('Aceptar'),
+            ),
+          ],
+        );
+      },
+    );
   }
 }
 

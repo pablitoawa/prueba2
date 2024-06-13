@@ -22,6 +22,13 @@ class Historial extends StatelessWidget {
 
 Widget cuerpo() {
   return Container(
+    decoration: const BoxDecoration(
+      image: DecorationImage(
+        image: NetworkImage(
+            'https://img.freepik.com/vector-gratis/fondo-lindo-cafe-vector-papel-tapiz-rosa_53876-136842.jpg?size=626&ext=jpg&ga=GA1.1.672697106.1718236800&semt=ais_user'),
+        fit: BoxFit.cover,
+      ),
+    ),
     padding: const EdgeInsets.all(20),
     alignment: Alignment.center,
     child: (Column(

@@ -22,6 +22,13 @@ class Cuenta extends StatelessWidget {
 
 Widget cuerpo() {
   return Container(
+    decoration: const BoxDecoration(
+      image: DecorationImage(
+        image: NetworkImage(
+            'https://i.pinimg.com/474x/14/c3/1d/14c31df3d4ea2be687e91d2427302448.jpg'),
+        fit: BoxFit.cover,
+      ),
+    ),
     padding: const EdgeInsets.all(20),
     alignment: Alignment.center,
     child: (Column(
@@ -39,5 +46,5 @@ Widget cuenta() {
 }
 
 Widget total() {
-  return const Text("Total de la cuenta: 400");
+  return const Text("Saldo de la cuenta: 400");
 }
